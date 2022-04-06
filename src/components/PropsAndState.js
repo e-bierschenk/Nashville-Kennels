@@ -14,7 +14,19 @@ export const PropsAndState = ({ yourName }) => {
     <>
       <h3>Welcome, {yourName} </h3>
       <p>{countClicks}</p>
-      <button onClick={(handleClick)}>Click Me</button>
+      <button onClick={handleClick}>Click Me</button>
+    </>
+  )
+}
+
+export const CheckBox = () => {
+  const [checked, setChecked] = useState(false)
+
+  const checker = () => setChecked(!checked)
+
+  return (
+    <>
+      <input type="checkbox" name="checkbox" value="yesno" checked={checked} onChange={checker}></input>
     </>
   )
 }

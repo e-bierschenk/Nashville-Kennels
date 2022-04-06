@@ -1,9 +1,11 @@
 import React from "react"
 import "./Customer.css"
 
-export const CustomerCard = () => (
-    <section className="customer">
-        <h3 className="customer__name">Shonk Lemons</h3>
-        <div className="customer__address">1234 Bermuda Dr.</div>
-    </section>
+export const CustomerCard = ({customer}) => (
+    <div className="card">
+            <div className="card-content">
+                <h3>{customer.name}</h3>
+                <p>{customer.address}</p>
+            </div>
+        </div>
 )
